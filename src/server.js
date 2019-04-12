@@ -23,8 +23,9 @@ mongoose.connect("mongodb+srv://omnistack:Arturdarela2012@cluster0-1aory.mongodb
 
 
 
-app.use((req,res)=>{
+app.use((req,res, next)=>{
     req.io = io;
+
     return next();
 })
 
